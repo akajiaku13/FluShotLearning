@@ -1,0 +1,11 @@
+python-dotenv
+pandas
+numpy
+scikit-learn
+dill
+pyaml
+mlflow
+fastapi
+uvicorn
+
+#-e .
