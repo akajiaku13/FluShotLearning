@@ -1,11 +1,12 @@
 import sys
 from flushot.components.data_ingestion import DataIngestion
 from flushot.components.data_validation import DataValidation
+from flushot.components.data_transformation import DataTransformation
 
 from flushot.entity.config_entity import TrainingPipelineConfig
 
-from flushot.entity.config_entity import DataIngestionConfig, DataValidationConfig
-from flushot.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact
+from flushot.entity.config_entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from flushot.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact, DataTransformationArtifact
 
 from flushot.exception.exception import FluShotException
 from flushot.logging.logger import logging
@@ -26,5 +27,11 @@ if __name__=='__main__':
         logging.info('Initiating Data validation')
         datavalidationartifact = data_validation.initiate_data_validation()
         logging.info('Data Validation Completed')
+
+        datatransformationconfig = DataTransformationConfig(trainingpipelineconfig)
+        data_transformation = DataTransformation(datavalidationartifact, datatransformationconfig)
+        logging.info('Initiating data transformation')
+        datatransformationartifact = data_transformation.initiate_data_transformation()
+        logging.info('Data transformation completed')
     except Exception as e:
         raise FluShotException(e, sys)
