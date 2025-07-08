@@ -107,4 +107,4 @@ print(df.dtypes)
 
 #endregion
 
-df.to_csv("FluShot_Data/flu_shot_data.csv", index=False)
+#df.to_csv("FluShot_Data/flu_shot_data.csv", index=False)

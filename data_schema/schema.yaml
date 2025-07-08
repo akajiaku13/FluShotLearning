@@ -1,0 +1,113 @@
+columns:
+  h1n1_concern: int32
+  h1n1_knowledge: int32
+  behavioral_antiviral_meds: int32
+  behavioral_avoidance: int32
+  behavioral_face_mask: int32
+  behavioral_wash_hands: int32
+  behavioral_large_gatherings: int32
+  behavioral_outside_home: int32
+  behavioral_touch_face: int32
+  doctor_recc_h1n1: int32
+  doctor_recc_seasonal: int32
+  chronic_med_condition: int32
+  child_under_6_months: int32
+  health_worker: int32
+  health_insurance: int32
+  opinion_h1n1_vacc_effective: int32
+  opinion_h1n1_risk: int32
+  opinion_h1n1_sick_from_vacc: int32
+  opinion_seas_vacc_effective: int32
+  opinion_seas_risk: int32
+  opinion_seas_sick_from_vacc: int32
+  age_group: int64
+  education: int64
+  income_poverty: int64
+  household_adults: int32
+  household_children: int32
+  h1n1_vaccine: int64
+  seasonal_vaccine: int64
+  is_train: int64
+  race_Black: int32
+  race_Hispanic: int32
+  race_Other or Multiple: int32
+  race_White: int32
+  sex_Female: int32
+  sex_Male: int32
+  marital_status_Married: int32
+  marital_status_Not Married: int32
+  rent_or_own_Own: int32
+  rent_or_own_Rent: int32
+  employment_status_Employed: int32
+  employment_status_Not in Labor Force: int32
+  employment_status_Unemployed: int32
+  hhs_geo_region_atmpeygn: int32
+  hhs_geo_region_bhuqouqj: int32
+  hhs_geo_region_dqpwygqj: int32
+  hhs_geo_region_fpwskwrf: int32
+  hhs_geo_region_kbazzjca: int32
+  hhs_geo_region_lrircsnp: int32
+  hhs_geo_region_lzgpxyit: int32
+  hhs_geo_region_mlyzmhmf: int32
+  hhs_geo_region_oxchjgsf: int32
+  hhs_geo_region_qufhixun: int32
+  "census_msa_MSA, Not Principle  City": int32
+  "census_msa_MSA, Principle City": int32
+  census_msa_Non-MSA: int32
+
+numerical_columns:
+  - h1n1_concern
+  - h1n1_knowledge
+  - behavioral_antiviral_meds
+  - behavioral_avoidance
+  - behavioral_face_mask
+  - behavioral_wash_hands
+  - behavioral_large_gatherings
+  - behavioral_outside_home
+  - behavioral_touch_face
+  - doctor_recc_h1n1
+  - doctor_recc_seasonal
+  - chronic_med_condition
+  - child_under_6_months
+  - health_worker
+  - health_insurance
+  - opinion_h1n1_vacc_effective
+  - opinion_h1n1_risk
+  - opinion_h1n1_sick_from_vacc
+  - opinion_seas_vacc_effective
+  - opinion_seas_risk
+  - opinion_seas_sick_from_vacc
+  - age_group
+  - education
+  - income_poverty
+  - household_adults
+  - household_children
+  - h1n1_vaccine
+  - seasonal_vaccine
+  - is_train
+  - race_Black
+  - race_Hispanic
+  - race_Other or Multiple
+  - race_White
+  - sex_Female
+  - sex_Male
+  - marital_status_Married
+  - marital_status_Not Married
+  - rent_or_own_Own
+  - rent_or_own_Rent
+  - employment_status_Employed
+  - employment_status_Not in Labor Force
+  - employment_status_Unemployed
+  - hhs_geo_region_atmpeygn
+  - hhs_geo_region_bhuqouqj
+  - hhs_geo_region_dqpwygqj
+  - hhs_geo_region_fpwskwrf
+  - hhs_geo_region_kbazzjca
+  - hhs_geo_region_lrircsnp
+  - hhs_geo_region_lzgpxyit
+  - hhs_geo_region_mlyzmhmf
+  - hhs_geo_region_oxchjgsf
+  - hhs_geo_region_qufhixun
+  - "census_msa_MSA, Not Principle  City"
+  - "census_msa_MSA, Principle City"
+  - census_msa_Non-MSA
