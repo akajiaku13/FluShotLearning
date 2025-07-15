@@ -107,4 +107,11 @@ print(df.dtypes)
 
 #endregion
 
+# Save cleaned and processed data
+train_processed = df[df['is_train'] == 1].drop(columns=['is_train'])
+test_processed = df[df['is_train'] == 0].drop(columns=['is_train', 'h1n1_vaccine', 'seasonal_vaccine'])
+
+train_processed.to_csv("FluShot_Data/train_processed.csv", index=False)
+test_processed.to_csv("FluShot_Data/test_processed.csv", index=False)
+
 #df.to_csv("FluShot_Data/flu_shot_data.csv", index=False)

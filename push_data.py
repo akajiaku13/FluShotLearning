@@ -50,7 +50,7 @@ class FluShotExtract():
             raise FluShotException(e, sys)
 
 if __name__ == '__main__':
-    FILE_PATH = "FluShot_Data/flu_shot_data.csv"
+    FILE_PATH = "FluShot_Data/train_processed.csv"
     DATABASE = 'rebeldb'
     Collection = 'FluShot'
     flushotobj = FluShotExtract()

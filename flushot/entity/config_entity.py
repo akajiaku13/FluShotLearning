@@ -31,7 +31,7 @@ class DataIngestionConfig:
             training_pipeline.DATA_INGESTION_INGESTED_DIR,
             training_pipeline.TEST_FILE_NAME
         )
-        self.train_test_split_use_istrain_column: float = training_pipeline.DATA_INGESTION_USE_IS_TRAIN_COLUMN
+        self.train_test_split_ratio: float = training_pipeline.DATA_INGESTION_TRAIN_TEST_SPLIT_RATION
         self.collection_name: str = training_pipeline.DATA_INGESTION_COLLECTION_NAME
         self.database_name: str = training_pipeline.DATA_INGESTION_DATABASE_NAME
 
@@ -93,3 +93,14 @@ class DataTransformationConfig:
             training_pipeline.PREPROCESSING_OBJECT_FILE_NAME
         )
         
+class ModelTrainerConfig:
+    def __init__(self, training_pipeline_config:TrainingPipelineConfig):
+        self.model_trainer_dir: str = os.path.join(
+            training_pipeline_config.artifact_dir, training_pipeline.MODEL_TRAINER_DIR_NAME
+        )
+        self.trained_model_file_path: str = os.path.join(
+            self.model_trainer_dir, training_pipeline.MODEL_TRAINER_TRAINED_MODEL_DIR,
+            training_pipeline.MODEL_FILE_NAME
+        )
+        self.expected_accuracy: float = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE
+        self.overfitting_underfitting_threshold = training_pipeline.MODEL_TRAINER_OVER_FITTING_THRESHOLD_UNDER_FITTING_THRESHOLD

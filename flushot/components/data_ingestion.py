@@ -54,11 +54,14 @@ class DataIngestion:
         
     def split_data_as_train_test(self, dataframe: pd.DataFrame):
         try:
-            logging.info('Starting train-test split based on `is_train` column')
+            logging.info('Starting train-test split')
+
+            stratify_col = dataframe['h1n1_vaccine'].astype(str) + "_" + dataframe['seasonal_vaccine'].astype(str)
 
             # Split based on is_train column
-            train_set = dataframe[dataframe['is_train'] == 1].drop(columns=['is_train'])
-            test_set = dataframe[dataframe['is_train'] == 0].drop(columns=['is_train'])
+            train_set, test_set = train_test_split(
+                dataframe, test_size=self.data_ingestion_config.train_test_split_ratio, stratify=stratify_col
+            )
 
             logging.info(f"Training set shape: {train_set.shape}")
             logging.info(f"Test set shape: {test_set.shape}")
